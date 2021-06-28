@@ -12,7 +12,7 @@ Currently, this SDK only supports PHP version `7.4+`
 
 You can install the Huboo PHP SDK using the following command:
 
-`composer require huboo/sdk`
+`composer require huboo/php-sdk`
 
 ### Getting Started
 
