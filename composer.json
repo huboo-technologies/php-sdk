@@ -1,6 +1,7 @@
 {
     "name": "huboo/api-php",
     "type": "library",
+    "description": "Huboo Public API SDK",
     "keywords": ["huboo", "api", "fulfillment"],
     "require": {
         "guzzlehttp/guzzle": "^7.3",
