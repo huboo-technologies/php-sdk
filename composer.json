@@ -1,5 +1,5 @@
 {
-    "name": "huboo/api-php",
+    "name": "huboo/php-sdk",
     "type": "library",
     "description": "Huboo Public API SDK",
     "keywords": ["huboo", "api", "fulfillment"],
