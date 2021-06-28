@@ -2,24 +2,20 @@
 
 ## Documentation
 
----
 You can find documentation on the public api https://api-docs.huboo.uk
 
 ## Supported Versions
 
----
 Currently, this SDK only supports PHP version `7.4+`
 
 ## Installation
 
----
 You can install the Huboo PHP SDK using the following command:
 
 `composer require huboo/sdk`
 
 ### Getting Started
 
----
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
