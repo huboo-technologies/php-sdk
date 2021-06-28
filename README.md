@@ -1,5 +1,7 @@
 # Huboo Public API - PHP SDK
 
+[![Test and Inspect](https://github.com/huboo-technologies/php-sdk/actions/workflows/php.yml/badge.svg)](https://github.com/huboo-technologies/php-sdk/actions/workflows/php.yml)
+
 ## Documentation
 
 You can find documentation on the public api https://api-docs.huboo.uk
