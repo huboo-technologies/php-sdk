@@ -1,0 +1,27 @@
+{
+    "name": "huboo/api-php",
+    "type": "library",
+    "keywords": ["huboo", "api", "fulfillment"],
+    "require": {
+        "guzzlehttp/guzzle": "^7.3",
+        "php": ">=7.4.0",
+        "psr/http-message": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Huboo API Team",
+            "email": "api.query@huboo.co.uk"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Huboo\\": "src/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.8",
+        "phpstan/phpstan": "^0.12.90",
+        "friendsofphp/php-cs-fixer": "^3.0"
+    }
+}
