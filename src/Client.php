@@ -6,8 +6,8 @@ namespace Huboo;
 
 use Huboo\Client\Parsers\OrderParser;
 use Huboo\Client\Requests\Contracts\RequestBuilderFactory;
-use Huboo\Client\RequestSender;
 use Huboo\Contracts\Client as ClientContract;
+use Huboo\Contracts\RequestSender;
 use Huboo\Order\Contracts\Order;
 
 class Client implements ClientContract

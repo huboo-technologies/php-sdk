@@ -6,12 +6,13 @@ namespace Huboo\Client;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Psr7\Request;
+use Huboo\Contracts\RequestSender as RequestSenderContract;
 use Huboo\Exceptions\UnauthorizedException;
 use Huboo\Exceptions\UnprocessableRequestException;
 use Huboo\Exceptions\ValidationException;
 use Psr\Http\Message\ResponseInterface;
 
-class RequestSender
+class RequestSender implements RequestSenderContract
 {
     /**
      * @var GuzzleClient
