@@ -26,6 +26,7 @@ interface Client
     /**
      * @param string $id
      * @return mixed
+     * @thorws UnprocessableRequestException
      */
     public function cancelOrder(string $id);
 }
