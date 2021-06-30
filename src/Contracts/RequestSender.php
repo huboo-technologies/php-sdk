@@ -8,5 +8,9 @@ use GuzzleHttp\Psr7\Request;
 
 interface RequestSender
 {
+    /**
+     * @param Request $request
+     * @return mixed
+     */
     public function send(Request $request);
 }
