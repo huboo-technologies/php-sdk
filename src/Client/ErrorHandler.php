@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Huboo\Client;
 
-use GuzzleHttp\Psr7\Response;
 use Huboo\Exceptions\UnauthorizedException;
 use Huboo\Exceptions\UnprocessableRequestException;
 use Huboo\Exceptions\ValidationException;
@@ -32,9 +31,9 @@ class ErrorHandler
     public function handle(ResponseInterface $response)
     {
         $responseBody = $response->getBody()->getContents();
-        if ($response->getStatusCode() === 400) {
+        if ($response->getStatusCode() === 400 || $response->getStatusCode() === 404) {
             $responseData = $this->parseResponseBody($responseBody);
-            throw $this->exceptionFactory->make($responseData['code'], $responseData['context'], $responseBody);
+            throw $this->exceptionFactory->make($responseData['code'], $responseData['context'], $responseBody, $response->getStatusCode());
         } elseif ($response->getStatusCode() === 422) {
             $responseData = $this->parseResponseBody($responseBody);
             throw new ValidationException($responseData['errors'], $responseBody);
