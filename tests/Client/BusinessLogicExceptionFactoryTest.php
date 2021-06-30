@@ -10,7 +10,7 @@ use Huboo\Exceptions\NoMatchingOrderException;
 
 test('Error code matches exception type', function ($errorCode, $exceptionType, $context = []) {
     $factory = new BusinessLogicExceptionFactory();
-    $exception = $factory->make($errorCode, $context, '');
+    $exception = $factory->make($errorCode, $context, '', 400);
     expect($exception)->toBeInstanceOf($exceptionType);
 })->with([
     [Errors::NO_MATCHING_ORDER, NoMatchingOrderException::class],

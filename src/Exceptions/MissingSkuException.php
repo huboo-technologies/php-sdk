@@ -11,10 +11,11 @@ class MissingSkuException extends BusinessLogicException
     /**
      * @param int[] $skus
      * @param string $responseBody
+     * @param int $statusCode
      */
-    public function __construct(array $skus, string $responseBody)
+    public function __construct(array $skus, string $responseBody, int $statusCode = 400)
     {
-        parent::__construct(Errors::MISSING_SKU, ['skus' => $skus], $responseBody);
+        parent::__construct(Errors::MISSING_SKU, ['skus' => $skus], $responseBody, $statusCode);
     }
 
     /**

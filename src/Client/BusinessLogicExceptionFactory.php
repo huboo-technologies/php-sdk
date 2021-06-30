@@ -16,9 +16,10 @@ class BusinessLogicExceptionFactory
      * @param string $errorCode
      * @param array $context
      * @param string $responseBody
+     * @param int $statusCode
      * @return BusinessLogicException
      */
-    public function make(string $errorCode, array $context, string $responseBody): BusinessLogicException
+    public function make(string $errorCode, array $context, string $responseBody, int $statusCode): BusinessLogicException
     {
         switch ($errorCode) {
             case Errors::INSUFFICIENT_STOCK:
@@ -26,20 +27,21 @@ class BusinessLogicExceptionFactory
             case Errors::MISSING_SKU:
                 return $this->createMissingSkuException($context, $responseBody);
             case Errors::NO_MATCHING_ORDER:
-                return $this->createNoMatchingOrderException($context, $responseBody);
+                return $this->createNoMatchingOrderException($context, $responseBody, $statusCode);
             default:
-                return new BusinessLogicException($errorCode, $context, $responseBody);
+                return new BusinessLogicException($errorCode, $context, $responseBody, $statusCode);
         }
     }
 
     /**
      * @param array $context
      * @param string $responseBody
+     * @param int $statusCode
      * @return NoMatchingOrderException
      */
-    protected function createNoMatchingOrderException(array $context, string $responseBody): NoMatchingOrderException
+    protected function createNoMatchingOrderException(array $context, string $responseBody, int $statusCode): NoMatchingOrderException
     {
-        return new NoMatchingOrderException($context, $responseBody);
+        return new NoMatchingOrderException($context, $responseBody, $statusCode);
     }
 
     /**
